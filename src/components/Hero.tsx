@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
+    <section id="home" className="relative min-h-screen flex items-center py-20 overflow-hidden bg-background">
       {/* Animated 2-color Background gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
         <motion.div 
