@@ -57,16 +57,19 @@ export default function Projects() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projectsData.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group flex flex-col bg-background rounded-2xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              transition={{ duration: 0.6, delay: index * 0.15, type: "spring", bounce: 0.3 }}
+              whileHover={{ y: -10 }}
+              className="group flex flex-col bg-background rounded-3xl overflow-hidden border border-border/50 shadow-md hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 relative"
             >
+              {/* Animated gradient border on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-accent via-secondary to-accent opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-10" />
               {/* Project Image */}
               <div className="relative h-56 w-full overflow-hidden bg-surface flex items-center justify-center">
                 {/* Fallback pattern if image is missing */}
@@ -83,17 +86,17 @@ export default function Projects() {
                 />
                 
                 {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-background/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <Link href={project.github} target="_blank" className="p-3 bg-primary text-white rounded-full hover:scale-110 transition-transform shadow-lg">
-                    <Github className="w-5 h-5" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center space-x-6">
+                  <Link href={project.github} target="_blank" className="p-4 bg-surface/80 backdrop-blur-md text-foreground rounded-full hover:scale-110 hover:bg-accent hover:text-white transition-all shadow-xl hover:shadow-accent/50 transform translate-y-8 group-hover:translate-y-0 duration-500">
+                    <Github className="w-6 h-6" />
                   </Link>
-                  <button className="p-3 bg-accent text-white rounded-full hover:scale-110 transition-transform shadow-lg">
-                    <ExternalLink className="w-5 h-5" />
+                  <button className="p-4 bg-gradient-to-r from-accent to-secondary text-white rounded-full hover:scale-110 transition-all shadow-xl hover:shadow-secondary/50 transform translate-y-8 group-hover:translate-y-0 duration-500 delay-75">
+                    <ExternalLink className="w-6 h-6" />
                   </button>
                 </div>
                 
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-background/90 backdrop-blur text-foreground text-xs font-bold rounded-full shadow-sm">
+                <div className="absolute top-4 left-4 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500">
+                  <span className="px-4 py-1.5 bg-gradient-to-r from-accent to-secondary text-white text-xs font-bold rounded-full shadow-lg tracking-wider">
                     PROJECT {project.id}
                   </span>
                 </div>
@@ -101,13 +104,13 @@ export default function Projects() {
 
               {/* Project Content */}
               <div className="p-6 flex flex-col flex-grow relative overflow-hidden">
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl -z-10 group-hover:bg-accent/10 transition-colors" />
+                <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-full blur-3xl -z-10 group-hover:from-accent/20 group-hover:to-secondary/20 transition-colors duration-500" />
                 
-                <p className="text-accent text-sm font-semibold mb-2">{project.category}</p>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
+                <p className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary text-sm font-bold tracking-wide uppercase mb-3">{project.category}</p>
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-accent group-hover:to-secondary transition-all duration-300">
                   {project.title}
                 </h3>
-                <p className="text-foreground/70 text-sm mb-6 flex-grow">
+                <p className="text-foreground/70 text-sm mb-6 flex-grow leading-relaxed">
                   {project.description}
                 </p>
                 
