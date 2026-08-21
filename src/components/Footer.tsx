@@ -4,14 +4,7 @@ import { Mail } from "lucide-react";
 import { FaGithub as Github, FaLinkedin as Linkedin } from "react-icons/fa";
 import Link from "next/link";
 
-const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Certification", href: "#certification" },
-  { name: "Contact", href: "#contact" },
-];
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -33,21 +26,7 @@ export default function Footer() {
             </p>
           </div>
           
-          {/* Quick Links */}
-          <div className="flex flex-col items-center md:items-end">
-            <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
-            <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-sm text-foreground/70 hover:text-accent transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
+
           
         </div>
         
