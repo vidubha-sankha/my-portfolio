@@ -57,8 +57,11 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-surface border border-border/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="relative group bg-surface border border-border/50 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
+              {/* Animated gradient background on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-full blur-xl -z-10 group-hover:bg-accent/20 transition-colors" />
               <h3 className="text-lg font-bold text-foreground mb-4 border-b border-border/50 pb-2">
                 {group.category}
               </h3>
@@ -66,9 +69,10 @@ export default function Skills() {
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1.5 bg-background border border-border rounded-md text-sm font-medium text-foreground/80 hover:border-accent hover:text-accent transition-colors"
+                    className="relative z-10 px-4 py-2 bg-background border border-border rounded-lg text-sm font-semibold text-foreground/80 hover:border-transparent hover:text-white transition-all shadow-sm hover:shadow-md overflow-hidden group/skill"
                   >
-                    {skill}
+                    <span className="relative z-10">{skill}</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover/skill:opacity-100 transition-opacity -z-10" />
                   </span>
                 ))}
               </div>

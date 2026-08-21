@@ -35,7 +35,7 @@ export default function About() {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About Me</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-accent to-secondary mx-auto rounded-full mb-6" />
-            <p className="text-xl text-foreground/80 font-medium">
+            <p className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary">
               Data. Technology. Problem Solving.
             </p>
           </motion.div>
@@ -62,15 +62,17 @@ export default function About() {
             </p>
 
             {/* Education Card */}
-            <div className="mt-8 p-6 bg-background rounded-2xl border border-border/50 shadow-sm flex items-start space-x-4">
-              <div className="p-3 bg-surface rounded-xl text-primary">
-                <GraduationCap className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="font-bold text-foreground">Bachelor of Information & Communication Technology (Hons.)</h4>
-                <p className="text-accent text-sm font-medium mt-1">2023 – Present</p>
-                <p className="text-foreground/70 text-sm mt-2">Faculty of Technological Studies</p>
-                <p className="text-foreground/70 text-sm">University of Vavuniya</p>
+            <div className="mt-8 p-[2px] bg-gradient-to-r from-accent/50 to-secondary/50 rounded-2xl shadow-sm hover:shadow-lg hover:shadow-accent/20 transition-all duration-300">
+              <div className="p-6 bg-background rounded-[14px] flex items-start space-x-4 h-full">
+                <div className="p-3 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-xl text-accent">
+                  <GraduationCap className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-foreground">Bachelor of Information & Communication Technology (Hons.)</h4>
+                  <p className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary text-sm font-bold mt-1">2023 – Present</p>
+                  <p className="text-foreground/70 text-sm mt-2">Faculty of Technological Studies</p>
+                  <p className="text-foreground/70 text-sm">University of Vavuniya</p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -84,13 +86,16 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-background p-6 rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-shadow group"
+                className="relative bg-background p-6 rounded-2xl border border-border/50 shadow-sm hover:shadow-xl hover:border-accent/50 transition-all duration-300 group overflow-hidden"
               >
-                <div className="mb-4 p-3 bg-surface rounded-xl inline-block group-hover:scale-110 transition-transform">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-full blur-2xl -z-10 group-hover:from-accent/20 group-hover:to-secondary/20 transition-colors" />
+                <div className="mb-4 p-3 bg-gradient-to-br from-surface to-background rounded-xl inline-block group-hover:scale-110 shadow-sm transition-transform duration-300">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
-                <p className="text-foreground/70">{item.description}</p>
+                <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-accent group-hover:to-secondary transition-all">
+                  {item.title}
+                </h3>
+                <p className="text-foreground/70 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>
