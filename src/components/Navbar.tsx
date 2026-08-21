@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Download } from "lucide-react";
-import { FaGithub as Github, FaLinkedin as Linkedin } from "react-icons/fa";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const navLinks = [
@@ -60,22 +59,6 @@ export default function Navbar() {
               ))}
             </div>
             
-            <div className="flex items-center space-x-4 border-l border-border pl-6">
-              <Link href="https://github.com/vidubha-sankha" target="_blank" className="text-foreground/80 hover:text-accent transition-colors">
-                <Github className="w-5 h-5" />
-              </Link>
-              <Link href="LINKEDIN_URL_HERE" target="_blank" className="text-foreground/80 hover:text-accent transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </Link>
-              <a
-                href="CV_FILE_HERE"
-                download
-                className="flex items-center px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-all shadow-md hover:shadow-lg text-sm font-medium"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                CV
-              </a>
-            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -104,22 +87,6 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <div className="flex items-center space-x-4 px-3 py-4 mt-4 border-t border-border">
-              <Link href="https://github.com/vidubha-sankha" target="_blank" className="text-foreground/80 hover:text-accent">
-                <Github className="w-6 h-6" />
-              </Link>
-              <Link href="LINKEDIN_URL_HERE" target="_blank" className="text-foreground/80 hover:text-accent">
-                <Linkedin className="w-6 h-6" />
-              </Link>
-              <a
-                href="CV_FILE_HERE"
-                download
-                className="flex items-center px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-all text-sm font-medium w-full justify-center"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download CV
-              </a>
-            </div>
           </div>
         </div>
       )}
