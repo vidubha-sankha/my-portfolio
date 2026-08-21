@@ -47,7 +47,7 @@ export default function Hero() {
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               
-              <a href="CV_FILE_HERE" download className="flex items-center px-6 py-3 bg-surface text-foreground border border-border rounded-lg hover:bg-border/50 transition-all font-medium">
+              <a href="/Vidubha_Sankha_CV.pdf" download="Vidubha_Sankha_CV.pdf" className="flex items-center px-6 py-3 bg-surface text-foreground border border-border rounded-lg hover:bg-border/50 transition-all font-medium">
                 <Download className="w-4 h-4 mr-2" />
                 Download CV
               </a>
