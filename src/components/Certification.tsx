@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -36,10 +36,15 @@ export default function Certification() {
             
             {/* Icon / Badge */}
             <div className="relative flex-shrink-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-background border border-border flex items-center justify-center relative z-10 shadow-inner p-6">
-                <Award className="w-full h-full text-accent" />
+              <div className="w-32 h-32 md:w-40 md:h-40 relative z-10 drop-shadow-md transition-transform hover:scale-105 duration-300">
+                <Image
+                  src="/images/certificate/meta-badge.png"
+                  alt="Meta Data Analyst Certificate Badge"
+                  width={160}
+                  height={160}
+                  className="object-contain w-full h-full rounded-xl"
+                />
               </div>
-              <div className="absolute inset-0 border-2 border-dashed border-secondary/30 rounded-full animate-[spin_20s_linear_infinite]" />
             </div>
 
             {/* Content */}
