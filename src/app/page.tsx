@@ -6,7 +6,7 @@ import Projects from "@/components/Projects";
 import Certification from "@/components/Certification";
 import CareerFocus from "@/components/CareerFocus";
 import Contact from "@/components/Contact";
-
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <Certification />
       <CareerFocus />
       <Contact />
-
+      <Footer />
     </main>
   );
 }
