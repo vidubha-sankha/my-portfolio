@@ -16,12 +16,12 @@ export default function Footer() {
 
         
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border/50 gap-4">
-          <p className="text-sm text-foreground/60">
+        <div className="flex flex-col items-center justify-center pt-8 border-t border-border/50 gap-4">
+          <p className="text-sm text-foreground/60 text-center">
             &copy; {currentYear} Vidubha Sankha. All rights reserved.
           </p>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center justify-center space-x-4">
             <Link href="https://github.com/vidubha-sankha" target="_blank" className="text-foreground/60 hover:text-accent transition-colors">
               <Github className="w-5 h-5" />
             </Link>
