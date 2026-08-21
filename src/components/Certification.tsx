@@ -67,7 +67,7 @@ export default function Certification() {
                 className="inline-flex items-center px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg font-medium group/btn"
               >
                 View Certificate
-                <ExternalLink className="https://www.coursera.org/account/accomplishments/specialization/E5XU1AX682KG" />
+                <ExternalLink className="https://coursera.org/share/851940ff2451f9a0c9386651e7f078a2" />
               </Link>
             </div>
 
