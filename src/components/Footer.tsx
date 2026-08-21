@@ -1,7 +1,7 @@
 "use client";
 
 import { Mail } from "lucide-react";
-import { FaGithub as Github, FaLinkedin as Linkedin } from "react-icons/fa";
+import { FaGithub as Github, FaLinkedin as Linkedin, FaBlogger as Blogger } from "react-icons/fa";
 import Link from "next/link";
 
 
@@ -27,6 +27,9 @@ export default function Footer() {
             </Link>
             <Link href="LINKEDIN_URL_HERE" target="_blank" className="text-foreground/60 hover:text-accent transition-colors">
               <Linkedin className="w-5 h-5" />
+            </Link>
+            <Link href="https://analyticswithsanka.blogspot.com/" target="_blank" className="text-foreground/60 hover:text-accent transition-colors">
+              <Blogger className="w-5 h-5" />
             </Link>
             <a href="mailto:mathugamagevidubasanka@gmail.com" className="text-foreground/60 hover:text-accent transition-colors">
               <Mail className="w-5 h-5" />
