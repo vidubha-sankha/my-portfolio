@@ -39,8 +39,22 @@ const projectsData = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-surface">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="relative py-24 bg-surface overflow-hidden">
+      {/* Animated Decorative Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <motion.div 
+          animate={{ scale: [1, 1.1, 1], rotate: [0, 45, 0] }} 
+          transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+          className="absolute top-[10%] right-[-5%] w-[40%] h-[40%] rounded-full bg-accent/5 blur-[100px]" 
+        />
+        <motion.div 
+          animate={{ scale: [1, 1.2, 1], rotate: [0, -45, 0] }} 
+          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+          className="absolute bottom-[10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-secondary/5 blur-[120px]" 
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div

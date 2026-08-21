@@ -7,8 +7,22 @@ import Link from "next/link";
 
 export default function Certification() {
   return (
-    <section id="certification" className="py-24 bg-background">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="certification" className="relative py-24 bg-background overflow-hidden">
+      {/* Animated Decorative Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <motion.div 
+          animate={{ scale: [1, 1.15, 1], rotate: [0, -30, 0] }} 
+          transition={{ repeat: Infinity, duration: 22, ease: "linear" }}
+          className="absolute top-[20%] left-[-5%] w-[35%] h-[35%] rounded-full bg-secondary/5 blur-[120px]" 
+        />
+        <motion.div 
+          animate={{ scale: [1, 1.25, 1], rotate: [0, 60, 0] }} 
+          transition={{ repeat: Infinity, duration: 28, ease: "linear" }}
+          className="absolute bottom-[-10%] right-[-10%] w-[45%] h-[45%] rounded-full bg-accent/5 blur-[120px]" 
+        />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div className="text-center mb-16">
           <motion.div
