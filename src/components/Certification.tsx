@@ -62,12 +62,12 @@ export default function Certification() {
               </p>
 
               <Link
-                href="https://coursera.org/share/851940ff2451f9a0c9386651e7f078a2"
+                href="CERTIFICATE_URL_HERE"
                 target="_blank"
                 className="inline-flex items-center px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg font-medium group/btn"
               >
                 View Certificate
-                <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                <ExternalLink className="https://coursera.org/share/851940ff2451f9a0c9386651e7f078a2" />
               </Link>
             </div>
 
@@ -78,3 +78,4 @@ export default function Certification() {
     </section>
   );
 }
+
