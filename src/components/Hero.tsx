@@ -42,23 +42,6 @@ export default function Hero() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-4 relative">
-              {/* Subtle decorative grid and glow behind the heading */}
-              <div className="absolute -inset-8 -z-10 hidden md:block">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.08),transparent_50%)]" />
-                <div 
-                  className="absolute inset-0 opacity-20"
-                  style={{
-                    backgroundSize: "20px 20px",
-                    backgroundImage: `
-                      linear-gradient(to right, rgba(220, 230, 240, 1) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(220, 230, 240, 1) 1px, transparent 1px)
-                    `,
-                    maskImage: "radial-gradient(circle at center, black 10%, transparent 60%)",
-                    WebkitMaskImage: "radial-gradient(circle at center, black 10%, transparent 60%)"
-                  }}
-                />
-              </div>
-              
               <h2 className="text-xl sm:text-2xl font-light text-foreground/70 tracking-wide">
                 Vidubha Sankha
               </h2>
@@ -125,7 +108,8 @@ export default function Hero() {
               </div>
 
               {/* Subtle Glow */}
-              <div className="absolute inset-0 rounded-full bg-primary/5 blur-[40px] -z-10 group-hover:bg-primary/10 transition-colors duration-700" />
+              <div className="absolute inset-0 rounded-full bg-[#38BDF8]/10 blur-[60px] -z-10 group-hover:bg-[#38BDF8]/15 transition-all duration-700 translate-x-4 translate-y-4" />
+              <div className="absolute inset-0 rounded-full bg-[#6D4AFF]/10 blur-[60px] -z-10 group-hover:bg-[#6D4AFF]/15 transition-all duration-700 -translate-x-4 -translate-y-4" />
             </div>
           </motion.div>
 

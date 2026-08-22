@@ -27,14 +27,12 @@ export default function BackgroundSystem() {
     <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-background">
       {/* Base Grid Layer - 28x28 mobile, 40x40 desktop */}
       <div 
-        className="absolute inset-0 opacity-40 bg-[size:28px_28px] md:bg-[size:40px_40px]"
+        className="absolute inset-0 bg-[size:28px_28px] md:bg-[size:40px_40px]"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(220, 230, 240, 0.5) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(220, 230, 240, 0.5) 1px, transparent 1px)
-          `,
-          maskImage: "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
-          WebkitMaskImage: "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)"
+            linear-gradient(to right, rgba(220, 230, 240, 0.55) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(220, 230, 240, 0.55) 1px, transparent 1px)
+          `
         }}
       />
 

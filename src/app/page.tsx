@@ -11,7 +11,7 @@ import SectionDivider from "@/components/SectionDivider";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen bg-background">
+    <main className="flex flex-col min-h-screen bg-transparent">
       <Navbar />
       <Hero />
       <SectionDivider />
