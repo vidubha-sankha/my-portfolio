@@ -7,17 +7,24 @@ import Certification from "@/components/Certification";
 import CareerFocus from "@/components/CareerFocus";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import SectionDivider from "@/components/SectionDivider";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main className="flex flex-col min-h-screen bg-background">
       <Navbar />
       <Hero />
+      <SectionDivider />
       <About />
+      <SectionDivider />
       <Skills />
+      <SectionDivider />
       <Projects />
+      <SectionDivider />
       <Certification />
+      <SectionDivider />
       <CareerFocus />
+      <SectionDivider />
       <Contact />
       <Footer />
     </main>
