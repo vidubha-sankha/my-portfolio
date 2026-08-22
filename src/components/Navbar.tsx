@@ -69,7 +69,7 @@ export default function Navbar() {
                 alt="VS Logo" 
                 width={32} 
                 height={32} 
-                className="mix-blend-multiply" 
+                className="rounded-md shadow-sm" 
               />
               VIDUBHA SANKHA
             </Link>
