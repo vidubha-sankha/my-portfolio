@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -61,9 +62,15 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link
               href="#home"
-              className="text-lg font-bold tracking-[0.2em] text-foreground hover:text-primary transition-colors flex items-center gap-2"
+              className="text-lg font-bold tracking-[0.2em] text-foreground hover:text-primary transition-colors flex items-center gap-3"
             >
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <Image 
+                src="/images/logo.jpg" 
+                alt="VS Logo" 
+                width={32} 
+                height={32} 
+                className="mix-blend-multiply" 
+              />
               VIDUBHA SANKHA
             </Link>
           </div>
