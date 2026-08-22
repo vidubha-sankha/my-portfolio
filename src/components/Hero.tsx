@@ -78,7 +78,7 @@ export default function Hero() {
                 <Link href="https://github.com/vidubha-sankha" target="_blank" className="text-muted hover:text-primary transition-colors duration-300">
                   <Github className="w-5 h-5" />
                 </Link>
-                <Link href="LINKEDIN_URL_HERE" target="_blank" className="text-muted hover:text-primary transition-colors duration-300">
+                <Link href="https://lk.linkedin.com/in/vidubha-sankha-b35867354" target="_blank" className="text-muted hover:text-primary transition-colors duration-300">
                   <Linkedin className="w-5 h-5" />
                 </Link>
                 <Link href="https://analyticswithsanka.blogspot.com/" target="_blank" className="text-muted hover:text-primary transition-colors duration-300">

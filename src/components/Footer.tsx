@@ -20,7 +20,7 @@ export default function Footer() {
             <Link href="https://github.com/vidubha-sankha" target="_blank" className="text-muted hover:text-primary transition-colors">
               <Github className="w-5 h-5" />
             </Link>
-            <Link href="LINKEDIN_URL_HERE" target="_blank" className="text-muted hover:text-primary transition-colors">
+            <Link href="https://lk.linkedin.com/in/vidubha-sankha-b35867354" target="_blank" className="text-muted hover:text-primary transition-colors">
               <Linkedin className="w-5 h-5" />
             </Link>
             <Link href="https://analyticswithsanka.blogspot.com/" target="_blank" className="text-muted hover:text-primary transition-colors">

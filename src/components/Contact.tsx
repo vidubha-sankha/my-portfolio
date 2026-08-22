@@ -121,7 +121,7 @@ export default function Contact() {
                   <Link href="https://github.com/vidubha-sankha" target="_blank" className="p-3 bg-background border border-border text-muted hover:text-primary hover:border-primary rounded-xl shadow-sm hover:shadow-md transition-all">
                     <Github className="w-4 h-4" />
                   </Link>
-                  <Link href="LINKEDIN_URL_HERE" target="_blank" className="p-3 bg-background border border-border text-muted hover:text-primary hover:border-primary rounded-xl shadow-sm hover:shadow-md transition-all">
+                  <Link href="https://lk.linkedin.com/in/vidubha-sankha-b35867354" target="_blank" className="p-3 bg-background border border-border text-muted hover:text-primary hover:border-primary rounded-xl shadow-sm hover:shadow-md transition-all">
                     <Linkedin className="w-4 h-4" />
                   </Link>
                   <Link href="https://analyticswithsanka.blogspot.com/" target="_blank" className="p-3 bg-background border border-border text-muted hover:text-primary hover:border-primary rounded-xl shadow-sm hover:shadow-md transition-all">
