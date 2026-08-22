@@ -47,18 +47,17 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex items-center space-x-4"
+            className="flex flex-col space-y-4"
           >
-            <h2 className="text-sm font-mono tracking-[0.2em] text-foreground/60 uppercase shrink-0">
-              06 / CONTACT
-            </h2>
-            <motion.div 
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="h-[1px] w-full bg-border origin-left"
-            />
+            <div className="flex items-center space-x-4">
+              <div className="h-[2px] w-8 bg-primary" />
+              <h2 className="text-sm font-bold tracking-widest text-primary uppercase">
+                06 / CONTACT
+              </h2>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+              Get In Touch
+            </h3>
           </motion.div>
         </div>
 
@@ -72,43 +71,43 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 space-y-8"
           >
-            <div className="bg-primary/20 backdrop-blur-sm p-8 border border-border">
-              <h3 className="text-sm font-mono tracking-widest text-foreground/70 mb-8 border-b border-white/5 pb-4 uppercase">
-                Terminal Output // Contact
+            <div className="bg-surface rounded-2xl p-8 border border-border shadow-sm">
+              <h3 className="text-xl font-bold text-foreground mb-8 border-b border-border pb-4">
+                Contact Information
               </h3>
               
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="text-accent mt-1">
+                <div className="flex items-start space-x-4 group">
+                  <div className="text-primary mt-1 p-2 bg-primary/10 rounded-lg group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-[10px] font-mono tracking-wider text-foreground/40 uppercase mb-1">Email</p>
-                    <a href="mailto:mathugamagevidubasanka@gmail.com" className="text-sm text-foreground/80 hover:text-accent transition-colors font-mono">
+                    <p className="text-xs font-bold tracking-wider text-muted uppercase mb-1">Email</p>
+                    <a href="mailto:mathugamagevidubasanka@gmail.com" className="text-sm text-foreground hover:text-primary transition-colors font-medium">
                       mathugamagevidubasanka@gmail.com
                     </a>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="text-secondary mt-1">
+                <div className="flex items-start space-x-4 group">
+                  <div className="text-primary mt-1 p-2 bg-primary/10 rounded-lg group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-[10px] font-mono tracking-wider text-foreground/40 uppercase mb-1">Phone</p>
-                    <a href="tel:+94783705255" className="text-sm text-foreground/80 hover:text-accent transition-colors font-mono">
+                    <p className="text-xs font-bold tracking-wider text-muted uppercase mb-1">Phone</p>
+                    <a href="tel:+94783705255" className="text-sm text-foreground hover:text-primary transition-colors font-medium">
                       +94 78 370 5255
                     </a>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="text-accent mt-1">
+                <div className="flex items-start space-x-4 group">
+                  <div className="text-primary mt-1 p-2 bg-primary/10 rounded-lg group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-[10px] font-mono tracking-wider text-foreground/40 uppercase mb-1">Location</p>
-                    <p className="text-sm text-foreground/80 font-mono">
+                    <p className="text-xs font-bold tracking-wider text-muted uppercase mb-1">Location</p>
+                    <p className="text-sm text-foreground font-medium">
                       344, Dodamkumbura Watta, Alawwa<br />
                       Sri Lanka
                     </p>
@@ -116,16 +115,16 @@ export default function Contact() {
                 </div>
               </div>
               
-              <div className="mt-10 pt-8 border-t border-white/5">
-                <p className="text-[10px] font-mono tracking-wider text-foreground/40 uppercase mb-4">Social Links</p>
+              <div className="mt-10 pt-8 border-t border-border">
+                <p className="text-xs font-bold tracking-wider text-muted uppercase mb-4">Social Links</p>
                 <div className="flex items-center space-x-4">
-                  <Link href="https://github.com/vidubha-sankha" target="_blank" className="p-3 bg-background border border-white/5 text-foreground/60 hover:text-accent hover:border-accent/30 transition-colors">
+                  <Link href="https://github.com/vidubha-sankha" target="_blank" className="p-3 bg-background border border-border text-muted hover:text-primary hover:border-primary rounded-xl shadow-sm hover:shadow-md transition-all">
                     <Github className="w-4 h-4" />
                   </Link>
-                  <Link href="LINKEDIN_URL_HERE" target="_blank" className="p-3 bg-background border border-white/5 text-foreground/60 hover:text-accent hover:border-accent/30 transition-colors">
+                  <Link href="LINKEDIN_URL_HERE" target="_blank" className="p-3 bg-background border border-border text-muted hover:text-primary hover:border-primary rounded-xl shadow-sm hover:shadow-md transition-all">
                     <Linkedin className="w-4 h-4" />
                   </Link>
-                  <Link href="https://analyticswithsanka.blogspot.com/" target="_blank" className="p-3 bg-background border border-white/5 text-foreground/60 hover:text-accent hover:border-accent/30 transition-colors">
+                  <Link href="https://analyticswithsanka.blogspot.com/" target="_blank" className="p-3 bg-background border border-border text-muted hover:text-primary hover:border-primary rounded-xl shadow-sm hover:shadow-md transition-all">
                     <Blogger className="w-4 h-4" />
                   </Link>
                 </div>
@@ -141,16 +140,14 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
-            <form onSubmit={handleSubmit} className="bg-primary/20 backdrop-blur-sm p-8 border border-border relative overflow-hidden group">
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(6,182,212,0.02)_1px,transparent_1px)] bg-[length:100%_4px] mix-blend-overlay pointer-events-none" />
-              
-              <h3 className="text-sm font-mono tracking-widest text-foreground/70 mb-8 border-b border-white/5 pb-4 uppercase">
-                Input Stream // Initialize Message
+            <form onSubmit={handleSubmit} className="bg-surface rounded-2xl p-8 border border-border shadow-sm">
+              <h3 className="text-xl font-bold text-foreground mb-8 border-b border-border pb-4">
+                Send a Message
               </h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-[10px] font-mono tracking-wider text-foreground/40 uppercase">Your Name</label>
+                  <label htmlFor="name" className="text-xs font-bold tracking-wider text-muted uppercase">Your Name</label>
                   <input
                     type="text"
                     id="name"
@@ -158,13 +155,13 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-background/50 border border-border rounded-none focus:outline-none focus:border-accent text-sm text-foreground/80 font-mono transition-colors"
-                    placeholder="_john_doe"
+                    className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm text-foreground transition-all shadow-sm"
+                    placeholder="John Doe"
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-[10px] font-mono tracking-wider text-foreground/40 uppercase">Your Email</label>
+                  <label htmlFor="email" className="text-xs font-bold tracking-wider text-muted uppercase">Your Email</label>
                   <input
                     type="email"
                     id="email"
@@ -172,14 +169,14 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-background/50 border border-border rounded-none focus:outline-none focus:border-accent text-sm text-foreground/80 font-mono transition-colors"
-                    placeholder="_john@example.com"
+                    className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm text-foreground transition-all shadow-sm"
+                    placeholder="john@example.com"
                   />
                 </div>
               </div>
               
               <div className="space-y-2 mb-6">
-                <label htmlFor="subject" className="text-[10px] font-mono tracking-wider text-foreground/40 uppercase">Subject</label>
+                <label htmlFor="subject" className="text-xs font-bold tracking-wider text-muted uppercase">Subject</label>
                 <input
                   type="text"
                   id="subject"
@@ -187,13 +184,13 @@ export default function Contact() {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-background/50 border border-border rounded-none focus:outline-none focus:border-accent text-sm text-foreground/80 font-mono transition-colors"
-                  placeholder="_subject_line"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm text-foreground transition-all shadow-sm"
+                  placeholder="Subject Line"
                 />
               </div>
               
               <div className="space-y-2 mb-8">
-                <label htmlFor="message" className="text-[10px] font-mono tracking-wider text-foreground/40 uppercase">Message</label>
+                <label htmlFor="message" className="text-xs font-bold tracking-wider text-muted uppercase">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -201,31 +198,31 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-background/50 border border-border rounded-none focus:outline-none focus:border-accent text-sm text-foreground/80 font-mono transition-colors resize-none"
-                  placeholder="_write_your_message_here..."
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm text-foreground transition-all shadow-sm resize-none"
+                  placeholder="Write your message here..."
                 ></textarea>
               </div>
               
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full px-6 py-4 font-mono text-xs uppercase tracking-widest flex items-center justify-center transition-all ${
+                className={`w-full px-6 py-4 text-sm font-bold uppercase tracking-widest rounded-lg flex items-center justify-center transition-all duration-300 shadow-sm ${
                   submitted 
-                    ? "bg-accent/20 text-accent border border-accent" 
-                    : "bg-transparent text-foreground border border-border hover:border-accent hover:text-accent"
+                    ? "bg-green-500/10 text-green-600 border border-green-500" 
+                    : "bg-primary text-white hover:bg-primary/90 hover:shadow-md hover:-translate-y-0.5"
                 }`}
               >
                 {submitted ? (
-                  "PACKET SENT SUCCESSFULLY"
+                  "MESSAGE SENT SUCCESSFULLY"
                 ) : isSubmitting ? (
                   <div className="flex items-center">
-                    <div className="w-4 h-4 border border-accent border-t-transparent rounded-full animate-spin mr-3" />
-                    TRANSMITTING...
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-3" />
+                    SENDING...
                   </div>
                 ) : (
                   <>
-                    EXECUTE_SEND
-                    <Send className="w-3 h-3 ml-3" />
+                    SEND MESSAGE
+                    <Send className="w-4 h-4 ml-2" />
                   </>
                 )}
               </button>

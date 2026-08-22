@@ -27,12 +27,12 @@ export default function BackgroundSystem() {
     <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-background">
       {/* Base Grid Layer */}
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-50"
         style={{
           backgroundSize: "60px 60px",
           backgroundImage: `
-            linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)
+            linear-gradient(to right, rgba(220, 230, 240, 0.8) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(220, 230, 240, 0.8) 1px, transparent 1px)
           `,
           maskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
           WebkitMaskImage: "linear-gradient(to bottom, black 40%, transparent 100%)"
@@ -43,19 +43,19 @@ export default function BackgroundSystem() {
       <div 
         className="absolute inset-0 opacity-30 transition-opacity duration-300 hidden md:block"
         style={{
-          background: `radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(6, 182, 212, 0.1), transparent 40%)`
+          background: `radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(56, 189, 248, 0.15), transparent 40%)`
         }}
       />
       
       <div 
         className="absolute inset-0 opacity-20 transition-opacity duration-300 hidden md:block"
         style={{
-          background: `radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(37, 99, 235, 0.1), transparent 40%)`
+          background: `radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(109, 74, 255, 0.08), transparent 40%)`
         }}
       />
 
-      {/* Very subtle ambient gradients to break the solid dark background */}
-      <div className="absolute top-0 left-[20%] w-[50%] h-[50%] bg-accent/5 rounded-full blur-[150px] animate-[pulse_10s_ease-in-out_infinite]" />
+      {/* Very subtle ambient gradients to break the solid background */}
+      <div className="absolute top-0 left-[20%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[150px] animate-[pulse_10s_ease-in-out_infinite]" />
       <div className="absolute bottom-[10%] right-[10%] w-[40%] h-[40%] bg-secondary/5 rounded-full blur-[150px] animate-[pulse_14s_ease-in-out_infinite]" />
     </div>
   );

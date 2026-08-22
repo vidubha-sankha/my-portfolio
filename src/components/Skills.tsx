@@ -41,18 +41,17 @@ export default function Skills() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex items-center space-x-4"
+            className="flex flex-col space-y-4"
           >
-            <h2 className="text-sm font-mono tracking-[0.2em] text-foreground/60 uppercase shrink-0">
-              02 / SKILLS
-            </h2>
-            <motion.div 
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="h-[1px] w-full bg-border origin-left"
-            />
+            <div className="flex items-center space-x-4">
+              <div className="h-[2px] w-8 bg-primary" />
+              <h2 className="text-sm font-bold tracking-widest text-primary uppercase">
+                02 / SKILLS
+              </h2>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+              Technical Expertise
+            </h3>
           </motion.div>
         </div>
 
@@ -64,11 +63,10 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative group bg-primary/20 backdrop-blur-sm border border-border hover:border-accent/50 p-8 shadow-sm transition-all duration-500 overflow-hidden"
+              className="relative group bg-surface border border-border hover:border-primary p-8 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(6,182,212,0.02)_1px,transparent_1px)] bg-[length:100%_4px] mix-blend-overlay pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <h3 className="text-sm font-mono text-foreground/70 mb-6 border-b border-white/5 pb-4 uppercase tracking-widest group-hover:text-accent transition-colors">
+              <h3 className="text-sm font-bold text-foreground mb-6 border-b border-border pb-4 uppercase tracking-widest group-hover:text-primary transition-colors">
                 {group.category}
               </h3>
               
@@ -76,7 +74,7 @@ export default function Skills() {
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1.5 bg-background/50 border border-border text-[11px] font-mono text-foreground/60 hover:border-accent hover:text-accent transition-colors cursor-default"
+                    className="px-3 py-1.5 bg-background border border-border rounded-md text-xs font-semibold text-muted hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors cursor-default"
                   >
                     {skill}
                   </span>

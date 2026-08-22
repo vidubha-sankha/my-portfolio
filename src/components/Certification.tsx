@@ -17,18 +17,17 @@ export default function Certification() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex items-center space-x-4"
+            className="flex flex-col space-y-4"
           >
-            <h2 className="text-sm font-mono tracking-[0.2em] text-foreground/60 uppercase shrink-0">
-              04 / CERTIFICATION
-            </h2>
-            <motion.div 
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="h-[1px] w-full bg-border origin-left"
-            />
+            <div className="flex items-center space-x-4">
+              <div className="h-[2px] w-8 bg-primary" />
+              <h2 className="text-sm font-bold tracking-widest text-primary uppercase">
+                04 / CERTIFICATION
+              </h2>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+              Professional Credentials
+            </h3>
           </motion.div>
         </div>
 
@@ -37,10 +36,8 @@ export default function Certification() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative bg-primary/20 backdrop-blur-sm border border-border hover:border-accent/50 transition-all duration-500 overflow-hidden group p-8 md:p-12"
+          className="relative bg-surface rounded-2xl border border-border hover:border-primary shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden group p-8 md:p-12"
         >
-          <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(6,182,212,0.02)_1px,transparent_1px)] bg-[length:100%_4px] mix-blend-overlay pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 relative z-10">
 
             {/* Icon / Badge */}
@@ -58,22 +55,22 @@ export default function Certification() {
 
             {/* Content */}
             <div className="flex-grow text-center md:text-left">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 bg-background/50 border border-white/10 mb-4">
-                <span className="text-[10px] font-mono tracking-widest text-foreground/60 uppercase">Provider // Meta & Coursera</span>
+              <div className="inline-flex items-center space-x-2 px-3 py-1 bg-background border border-border rounded-md mb-4">
+                <span className="text-[10px] font-bold tracking-widest text-muted uppercase">Provider // Meta & Coursera</span>
               </div>
 
-              <h3 className="text-xl md:text-3xl font-semibold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">
+              <h3 className="text-xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                 Meta Data Analyst Specialization
               </h3>
 
-              <p className="text-sm md:text-base font-light text-foreground/60 mb-8 leading-relaxed max-w-2xl">
+              <p className="text-sm md:text-base text-muted mb-8 leading-relaxed max-w-2xl">
                 Completed the Meta Data Analyst Specialization through Coursera, strengthening knowledge and practical understanding related to data analytics, python programming, SQL, and data visualization.
               </p>
 
               <Link
                 href="https://coursera.org/share/851940ff2451f9a0c9386651e7f078a2"
                 target="_blank"
-                className="inline-flex items-center px-6 py-3 bg-transparent text-foreground text-sm font-semibold tracking-wide border border-border hover:border-accent hover:text-accent transition-all group/btn"
+                className="inline-flex items-center px-6 py-3 bg-white text-muted text-sm font-bold tracking-wide rounded-lg border border-border hover:border-primary hover:text-primary shadow-sm transition-all group/btn"
               >
                 VERIFY CERTIFICATE
                 <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />

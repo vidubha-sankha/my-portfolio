@@ -51,7 +51,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-40 transition-all duration-500 ${
         scrolled
-          ? "bg-background/70 backdrop-blur-xl py-4 border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.1)]"
+          ? "bg-white/80 backdrop-blur-xl py-4 border-b border-border shadow-sm"
           : "bg-transparent py-6 border-b border-transparent"
       }`}
     >
@@ -61,9 +61,9 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link
               href="#home"
-              className="text-lg font-bold tracking-[0.2em] text-foreground hover:text-accent transition-colors flex items-center gap-2"
+              className="text-lg font-bold tracking-[0.2em] text-foreground hover:text-primary transition-colors flex items-center gap-2"
             >
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               VIDUBHA SANKHA
             </Link>
           </div>
@@ -77,15 +77,15 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`relative px-4 py-2 text-xs uppercase tracking-wider font-medium transition-colors duration-300 ${
-                      isActive ? "text-accent" : "text-foreground/70 hover:text-foreground"
+                    className={`relative px-4 py-2 text-xs uppercase tracking-wider font-bold transition-colors duration-300 ${
+                      isActive ? "text-primary" : "text-muted hover:text-primary"
                     }`}
                   >
                     {link.name}
                     {isActive && (
                       <motion.div
                         layoutId="activeNavIndicator"
-                        className="absolute bottom-0 left-0 w-full h-[1px] bg-accent"
+                        className="absolute bottom-0 left-0 w-full h-[2px] bg-primary rounded-t-md"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.3 }}
@@ -134,10 +134,10 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-4 py-3 text-sm tracking-widest uppercase font-medium rounded-lg transition-colors ${
+                  className={`block px-4 py-3 text-sm tracking-widest uppercase font-bold rounded-lg transition-colors ${
                     activeSection === link.href.substring(1)
-                      ? "text-accent bg-accent/10 border border-accent/20"
-                      : "text-foreground/70 hover:text-foreground hover:bg-surface border border-transparent"
+                      ? "text-primary bg-primary/5 border border-primary/20"
+                      : "text-muted hover:text-primary hover:bg-surface border border-transparent"
                   }`}
                 >
                   {link.name}
