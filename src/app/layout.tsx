@@ -18,6 +18,21 @@ export const metadata: Metadata = {
   title: "Vidubha Sankha | Aspiring Data Analyst",
   description: "Portfolio of Vidubha Sankha, an aspiring Data Analyst specializing in data analysis, machine learning, data visualization, Python, SQL, Power BI, and technology solutions.",
   keywords: ["Data Analyst", "Data Analysis", "Python", "SQL", "Power BI", "Machine Learning", "Data Visualization", "Sri Lanka", "Data Science", "Vidubha Sankha"],
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+};
+
+export const viewport = {
+  themeColor: '#F4F8FC',
 };
 
 export default function RootLayout({
