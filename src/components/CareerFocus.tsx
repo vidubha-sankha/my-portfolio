@@ -28,32 +28,28 @@ const focusAreas = [
 
 export default function CareerFocus() {
   return (
-    <section className="relative py-24 bg-surface overflow-hidden">
-      {/* Animated Decorative Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <motion.div 
-          animate={{ scale: [1, 1.2, 1], rotate: [0, 45, 0] }} 
-          transition={{ repeat: Infinity, duration: 24, ease: "linear" }}
-          className="absolute top-[10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-accent/5 blur-[120px]" 
-        />
-        <motion.div 
-          animate={{ scale: [1, 1.3, 1], rotate: [0, -45, 0] }} 
-          transition={{ repeat: Infinity, duration: 28, ease: "linear" }}
-          className="absolute bottom-[-10%] right-[-5%] w-[45%] h-[45%] rounded-full bg-secondary/5 blur-[120px]" 
-        />
-      </div>
-
+    <section className="relative py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        {/* Section Header */}
+        <div className="mb-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="flex items-center space-x-4"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What I'm Passionate About</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-accent to-secondary mx-auto rounded-full mb-6" />
+            <h2 className="text-sm font-mono tracking-[0.2em] text-foreground/60 uppercase shrink-0">
+              05 / CAREER FOCUS
+            </h2>
+            <motion.div 
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="h-[1px] w-full bg-border origin-left"
+            />
           </motion.div>
         </div>
 
@@ -65,14 +61,14 @@ export default function CareerFocus() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative bg-background rounded-2xl p-8 border border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-accent/30 transition-all duration-300 text-center flex flex-col items-center group overflow-hidden"
+              className="relative bg-primary/20 backdrop-blur-sm p-8 border border-border hover:border-accent/50 transition-all duration-300 text-center flex flex-col items-center group overflow-hidden"
             >
-              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-full blur-2xl -z-10 group-hover:from-accent/20 group-hover:to-secondary/20 transition-colors" />
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-surface to-background shadow-inner flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(6,182,212,0.02)_1px,transparent_1px)] bg-[length:100%_4px] mix-blend-overlay pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="w-16 h-16 rounded-none border border-white/5 bg-background flex items-center justify-center mb-6 group-hover:border-accent/50 group-hover:-translate-y-1 transition-all duration-300 relative z-10">
                 {area.icon}
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-accent group-hover:to-secondary transition-all">{area.title}</h3>
-              <p className="text-foreground/70">{area.description}</p>
+              <h3 className="text-sm font-mono tracking-widest text-foreground mb-3 group-hover:text-accent transition-all relative z-10 uppercase">{area.title}</h3>
+              <p className="text-foreground/60 text-sm font-light relative z-10">{area.description}</p>
             </motion.div>
           ))}
         </div>

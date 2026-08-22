@@ -23,21 +23,28 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-surface">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="relative py-32 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        {/* Section Header */}
+        <div className="mb-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="flex items-center space-x-4"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About Me</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-accent to-secondary mx-auto rounded-full mb-6" />
-            <p className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary">
-              Data. Technology. Problem Solving.
-            </p>
+            <h2 className="text-sm font-mono tracking-[0.2em] text-foreground/60 uppercase shrink-0">
+              01 / ABOUT
+            </h2>
+            <motion.div 
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="h-[1px] w-full bg-border origin-left"
+            />
           </motion.div>
         </div>
 
