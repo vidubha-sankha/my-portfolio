@@ -25,38 +25,38 @@ export default function BackgroundSystem() {
 
   return (
     <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-background">
-      {/* Base Grid Layer */}
+      {/* Base Grid Layer - 28x28 mobile, 40x40 desktop */}
       <div 
-        className="absolute inset-0 opacity-50"
+        className="absolute inset-0 opacity-40 bg-[size:28px_28px] md:bg-[size:40px_40px]"
         style={{
-          backgroundSize: "60px 60px",
           backgroundImage: `
-            linear-gradient(to right, rgba(220, 230, 240, 0.8) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(220, 230, 240, 0.8) 1px, transparent 1px)
+            linear-gradient(to right, rgba(220, 230, 240, 0.5) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(220, 230, 240, 0.5) 1px, transparent 1px)
           `,
-          maskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, black 40%, transparent 100%)"
+          maskImage: "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
+          WebkitMaskImage: "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)"
         }}
       />
 
-      {/* Mouse Following Glow */}
+      {/* Mouse Following Glow - Cyan */}
       <div 
-        className="absolute inset-0 opacity-30 transition-opacity duration-300 hidden md:block"
+        className="absolute inset-0 transition-opacity duration-300 hidden md:block"
         style={{
-          background: `radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(56, 189, 248, 0.15), transparent 40%)`
+          background: `radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(56, 189, 248, 0.08), transparent 40%)`
         }}
       />
       
+      {/* Mouse Following Glow - Purple */}
       <div 
-        className="absolute inset-0 opacity-20 transition-opacity duration-300 hidden md:block"
+        className="absolute inset-0 transition-opacity duration-300 hidden md:block"
         style={{
-          background: `radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(109, 74, 255, 0.08), transparent 40%)`
+          background: `radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(109, 74, 255, 0.05), transparent 40%)`
         }}
       />
 
       {/* Very subtle ambient gradients to break the solid background */}
-      <div className="absolute top-0 left-[20%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[150px] animate-[pulse_10s_ease-in-out_infinite]" />
-      <div className="absolute bottom-[10%] right-[10%] w-[40%] h-[40%] bg-secondary/5 rounded-full blur-[150px] animate-[pulse_14s_ease-in-out_infinite]" />
+      <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-[#38BDF8]/5 rounded-full blur-[150px] animate-[pulse_10s_ease-in-out_infinite]" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#6D4AFF]/5 rounded-full blur-[150px] animate-[pulse_14s_ease-in-out_infinite]" />
     </div>
   );
 }

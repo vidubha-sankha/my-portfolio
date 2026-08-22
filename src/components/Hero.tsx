@@ -41,13 +41,30 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-4">
+            <motion.div variants={itemVariants} className="space-y-4 relative">
+              {/* Subtle decorative grid and glow behind the heading */}
+              <div className="absolute -inset-8 -z-10 hidden md:block">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.08),transparent_50%)]" />
+                <div 
+                  className="absolute inset-0 opacity-20"
+                  style={{
+                    backgroundSize: "20px 20px",
+                    backgroundImage: `
+                      linear-gradient(to right, rgba(220, 230, 240, 1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(220, 230, 240, 1) 1px, transparent 1px)
+                    `,
+                    maskImage: "radial-gradient(circle at center, black 10%, transparent 60%)",
+                    WebkitMaskImage: "radial-gradient(circle at center, black 10%, transparent 60%)"
+                  }}
+                />
+              </div>
+              
               <h2 className="text-xl sm:text-2xl font-light text-foreground/70 tracking-wide">
                 Vidubha Sankha
               </h2>
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight">
                 Turning Data Into <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary relative">
                   Meaningful Insights.
                 </span>
               </h1>
