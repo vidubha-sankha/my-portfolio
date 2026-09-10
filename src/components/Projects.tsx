@@ -33,6 +33,15 @@ const projectsData = [
     technologies: ["PHP", "MySQL", "JavaScript", "HTML/CSS"],
     image: "/images/projects/hsms.jpg",
     github: "https://github.com/vidubha-sankha/Home-Service-Management-System-main"
+  },
+  {
+    id: "04",
+    title: "Employee Attendance Overview Dashboard",
+    category: "Data Analysis / Power BI",
+    description: "An interactive Power BI dashboard developed to analyze 600 employee attendance records across multiple departments and branches. It monitors key attendance indicators—including present, late, leave, and absent employees—while visualizing attendance trends, working hours, branch performance, and departmental patterns. Interactive filters and slicers allow users to explore the data by date, department, employee, branch, and attendance status, supporting effective workforce monitoring and data-driven HR decision-making.",
+    technologies: ["Power BI", "Microsoft Excel", "Data Analysis", "KPI Analysis", "Dashboard Design"],
+    image: "/images/projects/employee-attendance.png",
+    github: "https://github.com/vidubha-sankha/Employee_Attendance_Overview"
   }
 ];
 
