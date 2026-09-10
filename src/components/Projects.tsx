@@ -91,6 +91,7 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  unoptimized
                   className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
