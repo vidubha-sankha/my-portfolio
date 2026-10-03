@@ -59,9 +59,9 @@ export default function Projects() {
             transition={{ duration: 0.5 }}
             className="flex flex-col space-y-4"
           >
-            <div className="flex items-center space-x-4">
-              <div className="h-[2px] w-8 bg-primary" />
-              <h2 className="text-sm font-bold tracking-widest text-primary uppercase">
+            <div className="flex items-center space-x-3">
+              <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+              <h2 className="text-xs font-mono tracking-[0.2em] text-primary uppercase font-semibold">
                 03 / PROJECTS
               </h2>
             </div>
