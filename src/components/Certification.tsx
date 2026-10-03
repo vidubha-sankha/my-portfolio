@@ -70,7 +70,7 @@ export default function Certification() {
               <Link
                 href="https://coursera.org/share/851940ff2451f9a0c9386651e7f078a2"
                 target="_blank"
-                className="inline-flex items-center px-6 py-3 bg-white text-muted text-sm font-bold tracking-wide rounded-lg border border-border hover:border-primary hover:text-primary shadow-sm transition-all group/btn"
+                className="inline-flex items-center px-6 py-3 bg-white text-muted text-sm font-bold tracking-wide rounded-[12px] border border-border hover:border-primary hover:text-primary shadow-sm transition-all group/btn"
               >
                 VERIFY CERTIFICATE
                 <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />

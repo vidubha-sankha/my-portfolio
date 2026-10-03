@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { FaGithub as Github, FaLinkedin as Linkedin, FaBlogger as Blogger } from "react-icons/fa";
+import { FaGithub as Github, FaLinkedin as Linkedin, FaYoutube as Youtube } from "react-icons/fa";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -124,8 +124,8 @@ export default function Contact() {
                   <Link href="https://lk.linkedin.com/in/vidubha-sankha-b35867354" target="_blank" className="p-3 bg-background border border-border text-muted hover:text-primary hover:border-primary rounded-xl shadow-sm hover:shadow-md transition-all">
                     <Linkedin className="w-4 h-4" />
                   </Link>
-                  <Link href="https://analyticswithsanka.blogspot.com/" target="_blank" className="p-3 bg-background border border-border text-muted hover:text-primary hover:border-primary rounded-xl shadow-sm hover:shadow-md transition-all">
-                    <Blogger className="w-4 h-4" />
+                  <Link href="https://youtube.com/@vidubha-sankha" target="_blank" className="p-3 bg-background border border-border text-muted hover:text-primary hover:border-primary rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <Youtube className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -206,7 +206,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full px-6 py-4 text-sm font-bold uppercase tracking-widest rounded-lg flex items-center justify-center transition-all duration-300 shadow-sm ${
+                className={`w-full px-6 py-4 text-sm font-bold uppercase tracking-widest rounded-[12px] flex items-center justify-center transition-all duration-300 shadow-sm ${
                   submitted 
                     ? "bg-green-500/10 text-green-600 border border-green-500" 
                     : "bg-primary text-white hover:bg-primary/90 hover:shadow-md hover:-translate-y-0.5"

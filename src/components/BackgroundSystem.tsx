@@ -30,8 +30,8 @@ export default function BackgroundSystem() {
         className="absolute inset-0 bg-[size:28px_28px] md:bg-[size:40px_40px]"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(220, 230, 240, 0.55) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(220, 230, 240, 0.55) 1px, transparent 1px)
+            linear-gradient(to right, rgba(220, 230, 240, 0.25) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(220, 230, 240, 0.25) 1px, transparent 1px)
           `
         }}
       />

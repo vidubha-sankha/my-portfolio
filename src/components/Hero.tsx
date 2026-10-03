@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
-import { FaGithub as Github, FaLinkedin as Linkedin, FaBlogger as Blogger } from "react-icons/fa";
+import { FaGithub as Github, FaLinkedin as Linkedin, FaYoutube as Youtube } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -58,7 +58,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-4">
-              <Link href="#projects" className="group relative flex items-center px-6 py-3 bg-primary text-white text-sm font-semibold tracking-wide rounded-lg overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+              <Link href="#projects" className="group relative flex items-center px-6 py-3.5 bg-primary text-white text-sm font-bold tracking-wide rounded-[12px] overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
                 <span className="relative z-10 flex items-center">
                   View Projects
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -66,7 +66,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity -z-0" />
               </Link>
 
-              <a href="/Vidubha_Sankha_CV.pdf" download="Vidubha_Sankha_CV.pdf" className="group flex items-center px-6 py-3 bg-surface text-foreground text-sm font-semibold tracking-wide border border-border rounded-lg shadow-sm hover:border-primary hover:text-primary hover:-translate-y-0.5 transition-all duration-300">
+              <a href="/Vidubha_Sankha_CV.pdf" download="Vidubha_Sankha_CV.pdf" className="group flex items-center px-6 py-3.5 bg-surface text-foreground text-sm font-bold tracking-wide border border-border rounded-[12px] shadow-sm hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
                 <Download className="w-4 h-4 mr-2 opacity-70 group-hover:opacity-100 transition-opacity" />
                 Download CV
               </a>
@@ -81,8 +81,8 @@ export default function Hero() {
                 <Link href="https://lk.linkedin.com/in/vidubha-sankha-b35867354" target="_blank" className="text-muted hover:text-primary transition-colors duration-300">
                   <Linkedin className="w-5 h-5" />
                 </Link>
-                <Link href="https://analyticswithsanka.blogspot.com/" target="_blank" className="text-muted hover:text-primary transition-colors duration-300">
-                  <Blogger className="w-5 h-5" />
+                <Link href="https://youtube.com/@vidubha-sankha" target="_blank" className="text-muted hover:text-primary transition-colors duration-300">
+                  <Youtube className="w-5 h-5" />
                 </Link>
               </div>
             </motion.div>
@@ -95,7 +95,11 @@ export default function Hero() {
           >
             {/* Clean minimal container for profile */}
             <div className="relative w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] group mx-auto">
-              <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl transition-transform duration-700 ease-out group-hover:scale-[1.02] z-10 bg-surface">
+              {/* Subtle accent glow */}
+              <div className="absolute inset-0 rounded-full bg-[#087EA4]/5 blur-[40px] group-hover:bg-[#087EA4]/10 transition-colors duration-700 -z-10" />
+              
+              {/* Main image container */}
+              <div className="absolute inset-0 rounded-full overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-[6px] border-white transition-transform duration-700 ease-out group-hover:scale-[1.02] z-10 bg-surface">
                 <Image
                   src="/images/profile.jpg"
                   alt="Vidubha Sankha"
