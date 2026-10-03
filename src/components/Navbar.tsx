@@ -62,29 +62,23 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link
               href="#home"
-              className="text-lg font-bold tracking-[0.2em] text-foreground hover:text-primary transition-colors flex items-center gap-3"
+              className="text-lg font-bold tracking-[0.1em] text-foreground hover:text-primary transition-colors flex items-center gap-2"
             >
-              <Image 
-                src="/images/logo.jpg" 
-                alt="VS Logo" 
-                width={32} 
-                height={32} 
-                className="rounded-md shadow-sm" 
-              />
+              <span className="w-2 h-2 rounded-full bg-primary" />
               VIDUBHA SANKHA
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <div className="flex space-x-1">
+            <div className="flex space-x-6">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.href.substring(1);
                 return (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`relative px-4 py-2 text-xs uppercase tracking-wider font-bold transition-colors duration-300 ${
+                    className={`relative py-2 text-xs uppercase tracking-widest font-bold transition-colors duration-300 ${
                       isActive ? "text-primary" : "text-muted hover:text-primary"
                     }`}
                   >
@@ -92,7 +86,7 @@ export default function Navbar() {
                     {isActive && (
                       <motion.div
                         layoutId="activeNavIndicator"
-                        className="absolute bottom-0 left-0 w-full h-[2px] bg-primary rounded-t-md"
+                        className="absolute -bottom-[6px] left-0 right-0 h-[2px] bg-primary"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.3 }}

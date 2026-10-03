@@ -72,7 +72,7 @@ export default function Hero() {
               </a>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="flex items-center space-x-6 pt-12 border-t border-border">
+            <motion.div variants={itemVariants} className="flex items-center space-x-6 pt-8">
               <span className="text-[10px] font-mono text-muted tracking-[0.2em] uppercase font-bold">Connect :</span>
               <div className="flex space-x-4">
                 <Link href="https://github.com/vidubha-sankha" target="_blank" className="text-muted hover:text-primary transition-colors duration-300">
@@ -94,22 +94,16 @@ export default function Hero() {
             className="lg:col-span-5 relative flex justify-center items-center lg:justify-end mt-12 lg:mt-0"
           >
             {/* Clean minimal container for profile */}
-            <div className="relative w-64 h-64 sm:w-[400px] sm:h-[400px] group perspective-[1000px]">
-
-              {/* Inner container */}
-              <div className="absolute inset-4 rounded-full overflow-hidden bg-surface shadow-lg border border-border group-hover:shadow-2xl group-hover:border-primary/30 group-hover:scale-[1.02] transition-all duration-700 ease-out z-10">
+            <div className="relative w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] group mx-auto">
+              <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl transition-transform duration-700 ease-out group-hover:scale-[1.02] z-10 bg-surface">
                 <Image
                   src="/images/profile.jpg"
                   alt="Vidubha Sankha"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover"
                   priority
                 />
               </div>
-
-              {/* Subtle Glow */}
-              <div className="absolute inset-0 rounded-full bg-[#38BDF8]/10 blur-[60px] -z-10 group-hover:bg-[#38BDF8]/15 transition-all duration-700 translate-x-4 translate-y-4" />
-              <div className="absolute inset-0 rounded-full bg-[#6D4AFF]/10 blur-[60px] -z-10 group-hover:bg-[#6D4AFF]/15 transition-all duration-700 -translate-x-4 -translate-y-4" />
             </div>
           </motion.div>
 
