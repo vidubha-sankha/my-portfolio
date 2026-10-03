@@ -101,7 +101,7 @@ export default function Hero() {
               {/* Main image container */}
               <div className="absolute inset-0 rounded-full overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-[6px] border-white transition-transform duration-700 ease-out group-hover:scale-[1.02] z-10 bg-surface">
                 <Image
-                  src="/images/profile.jpg"
+                  src="/images/profile.png"
                   alt="Vidubha Sankha"
                   fill
                   className="object-cover"
