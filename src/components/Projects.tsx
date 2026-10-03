@@ -49,7 +49,7 @@ export default function Projects() {
   return (
     <section id="projects" className="relative py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="mb-20">
           <motion.div
@@ -86,7 +86,7 @@ export default function Projects() {
               <div className="relative h-64 w-full overflow-hidden bg-background border-b border-border">
                 {/* Fallback pattern */}
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
-                
+
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -97,19 +97,19 @@ export default function Projects() {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-                
+
                 {/* Light gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                   <div className="flex items-center space-x-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                     <Link href={project.github} target="_blank" className="p-3 bg-white border border-border text-foreground hover:text-primary rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-                       <Github className="w-5 h-5" />
-                     </Link>
-                     <button className="p-3 bg-primary text-white hover:bg-primary/90 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-                       <ExternalLink className="w-5 h-5" />
-                     </button>
-                   </div>
+                  <div className="flex items-center space-x-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <Link href={project.github} target="_blank" className="p-3 bg-white border border-border text-foreground hover:text-primary rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                      <Github className="w-5 h-5" />
+                    </Link>
+                    <button className="p-3 bg-primary text-white hover:bg-primary/90 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                      <ExternalLink className="w-5 h-5" />
+                    </button>
+                  </div>
                 </div>
-                
+
                 {/* ID Badge */}
                 <div className="absolute top-0 left-0 bg-primary/10 backdrop-blur-md rounded-br-2xl border-b border-r border-primary/20 px-4 py-2">
                   <span className="text-xs font-bold text-primary">
@@ -129,7 +129,7 @@ export default function Projects() {
                 <p className="text-muted text-sm mb-8 flex-grow leading-relaxed">
                   {project.description}
                 </p>
-                
+
                 <div className="mt-auto">
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map(tech => (
@@ -138,7 +138,7 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex items-center justify-between border-t border-border pt-4 mt-4">
                     <Link href={project.github} target="_blank" className="text-xs font-bold text-muted hover:text-primary flex items-center transition-colors">
                       <Github className="w-4 h-4 mr-2" /> GITHUB
