@@ -66,7 +66,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity -z-0" />
               </Link>
 
-              <a href="/Vidubha_Sankha_CV.pdf" download="Vidubha_Sankha_CV.pdf" className="group flex items-center px-6 py-3.5 bg-surface text-foreground text-sm font-bold tracking-wide border border-border rounded-[12px] shadow-sm hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+              <a href="/Vidubha_Sankha.pdf" download="Vidubha_Sankha.pdf" className="group flex items-center px-6 py-3.5 bg-surface text-foreground text-sm font-bold tracking-wide border border-border rounded-[12px] shadow-sm hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
                 <Download className="w-4 h-4 mr-2 opacity-70 group-hover:opacity-100 transition-opacity" />
                 Download CV
               </a>
